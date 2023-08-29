@@ -3,7 +3,7 @@ import PicsCard from "./PicsCard";
 
 export type pics = {
   id: number;
-  src: { medium: string; large: string };
+  src: { medium: string; large2x: string };
   alt: string;
 };
 
