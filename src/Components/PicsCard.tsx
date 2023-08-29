@@ -5,7 +5,7 @@ const PicsCard = ({ pic }: { pic: pics }) => {
     <div className="">
       <img
         className="md:w-64 w-[350px] h-96 object-cover"
-        src={pic.src.medium}
+        src={pic.src.large}
         alt={pic.alt}
       />
     </div>
