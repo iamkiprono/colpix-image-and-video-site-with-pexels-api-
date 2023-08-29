@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
 import PicsCard from "./PicsCard";
 
+export type pics = {
+  id: number;
+  src: { medium: string };
+  alt: string;
+};
+
 const Homepage = () => {
   const apiKey = import.meta.env.VITE_PEXELS_API_KEY;
 
-  const [pics, setPics] = useState([]);
+  const [pics, setPics] = useState<pics[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -52,7 +58,7 @@ const Homepage = () => {
   return (
     <div>
       <form
-      className="flex justify-center my-4"
+        className="flex justify-center my-4"
         onSubmit={(e) => {
           e.preventDefault();
           searchImage();
